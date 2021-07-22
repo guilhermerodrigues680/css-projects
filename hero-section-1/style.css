@@ -1,0 +1,164 @@
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: Min(720px, 100vh);
+  max-width: 1280px;
+  padding: 0 1rem;
+  background: #fefefe;
+  margin: auto;
+}
+
+.button {
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: #0a70ac;
+  cursor: pointer;
+}
+
+.header {
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .logo {
+  font-size: 2.25rem;
+  color: #e84e87;
+}
+
+.header .menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+.header .menu__item {
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  color: #0a70ac;
+  cursor: pointer;
+}
+
+.header .menu__item:hover, .header .menu__item:active {
+  color: white;
+  background: #0a70ac;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+  background-image: url("mosque.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+.hero-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.hero-section .hero-text .hero__title {
+  font-size: 4rem;
+  color: #0a71a8;
+}
+
+.hero-section .hero-text .hero__subtitle {
+  font-size: 1.5rem;
+  color: #636363;
+  margin: 1.5rem 0;
+}
+
+.hero-section .hero-text .button {
+  font-size: 1.25rem;
+  padding: 1.25rem 2rem;
+  background: #e84e87;
+}
+
+.hero-section .social-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+.hero-section .social-menu .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.75rem;
+}
+
+.hero-section .social-menu .button img {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+/*# sourceMappingURL=style.css.map */

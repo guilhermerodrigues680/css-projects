@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto CSS</title>
+  <!-- https://www.jsdelivr.com/package/npm/modern-normalize -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="modern-normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- https://stackoverflow.com/questions/8330559/hover-effects-using-css3-touch-events -->
+<body ontouchstart="">
+  <header class="header">
+    <div class="logo">Ramadan</div>
+    <nav class="menu">
+      <ul>
+        <li class="menu__item menu__item--active">Home</li>
+        <li class="menu__item">About</li>
+        <li class="menu__item">Calendar</li>
+        <li class="menu__item">Blog</li>
+        <li class="menu__item">Contact</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="hero-section">
+      <article class="hero-text">
+        <h1 class="hero__title">Happy Ramadan Kareen</h1>
+        <p class="hero__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button class="button">Read More</button>
+      </article>
+      <div class="social-menu">
+        <span class="button"><img src="facebook.png" alt="facebook logo"></span>
+        <span class="button"><img src="twitter.png" alt="twitter logo"></span>
+        <span class="button"><img src="instagram.png" alt="instagram logo"></span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
