@@ -1,5 +1,6 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -88,4 +89,8 @@ li a:active::before {
   li a:hover::before {
     background: #14a8e0;
   }
+}
+
+p {
+  color: white;
 }
