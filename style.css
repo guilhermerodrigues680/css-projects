@@ -48,9 +48,49 @@ body {
 .project-list .list .list-item {
   font-size: 1.125rem;
   margin-top: 0.75rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 0 0.5rem 0 0;
+  border-radius: 9999px;
   /* https://medium.com/@mezoistvan/finally-a-css-only-solution-to-hover-on-touchscreens-c498af39c31c */
   /* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
   /* mouse, touch pad */
+}
+
+.project-list .list .list-item::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  display: block;
+  top: 0;
+  right: 0rem;
+  bottom: 0;
+  left: 0;
+  background: #14a8e0;
+  border-radius: 9999px;
+  -webkit-transform: translateX(-100.1%);
+          transform: translateX(-100.1%);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+}
+
+.project-list .list .list-item:active:before {
+  -webkit-transition-duration: 0.05s;
+          transition-duration: 0.05s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-list .list .list-item:hover:before {
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .project-list .list .list-item a {
@@ -89,10 +129,10 @@ body {
           transform: rotateZ(45deg) translate(-36%, -30%);
   border-top: 2px solid white;
   border-right: 2px solid white;
-}
-
-.project-list .list .list-item a:active {
-  color: #14a8e0;
+  -webkit-transition: -webkit-transform 0.25s ease;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
 }
 
 .project-list .list .list-item a:active::before {
@@ -107,9 +147,19 @@ body {
   .project-list .list .list-item a:hover::before {
     background: #14a8e0;
   }
+  .project-list .list .list-item a:hover::after {
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+    -webkit-transform: rotateZ(45deg) translate(15%, -90%);
+            transform: rotateZ(45deg) translate(15%, -90%);
+  }
 }
 
 .author {
+  color: white;
+}
+
+.author a {
   color: white;
 }
 /*# sourceMappingURL=style.css.map */

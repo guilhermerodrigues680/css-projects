@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "ritwickdey.liveserver",
-        "ritwickdey.live-sass"
+        "ritwickdey.live-sass",
+        "editorconfig.editorconfig"
     ]
 }

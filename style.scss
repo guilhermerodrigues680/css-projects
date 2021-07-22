@@ -33,6 +33,38 @@ body {
     .list-item {
       font-size: 1.125rem;
       margin-top: 0.75rem;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      padding: 0 0.5rem 0 0;
+      border-radius: 9999px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        display: block;
+        top: 0;
+        right: 0rem;
+        bottom: 0;
+        left: 0;
+        background: #14a8e0;
+        border-radius: 9999px;
+        transform: translateX(-100.1%);
+        transition: transform 0.5s ease-in;
+      }
+
+      &:active:before {
+        transition-duration: 0.05s;
+        transform: translateX(0);
+      }
+
+      @media(hover: hover) and (pointer: fine) {
+        &:hover:before {
+          transition-delay: 0.1s;
+          transform: translateX(0);
+        }
+      }
 
       a {
         display: flex;
@@ -64,12 +96,9 @@ body {
         transform: rotateZ(45deg) translate(-36%, -30%);
         border-top: 2px solid white;
         border-right: 2px solid white;
+        transition: transform 0.25s ease;
       }
 
-      a:active {
-        color: #14a8e0;
-      }
-      
       a:active::before {
         background: #14a8e0;
       }
@@ -85,6 +114,11 @@ body {
         a:hover::before {
           background: #14a8e0;
         }
+
+        a:hover::after {
+          transition-delay: 0.1s;
+          transform: rotateZ(45deg) translate(15%, -90%)
+        }
       }
     }
   }
@@ -92,4 +126,8 @@ body {
 
 .author {
   color: white;
+
+  a {
+    color: white;
+  }
 }
