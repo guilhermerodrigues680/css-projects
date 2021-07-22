@@ -1,0 +1,29 @@
+.box {
+  background: lawngreen;
+  width: 50%;
+  height: 50%;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+
+  box-shadow:
+    // Bottom
+    0 2rem 0px -1rem blue,
+    0 4rem 0px -2rem red,
+    0 6rem 0px -3rem purple,
+
+    // TOP
+    0 -2rem 0px -1rem blue,
+    0 -4rem 0px -2rem red,
+    0 -6rem 0px -3rem purple,
+
+    // Right
+    2rem 0 0px -1rem blue,
+    4rem 0 0px -2rem red,
+    6rem 0 0px -3rem purple,
+
+    // Left
+    -2rem 0 0px -1rem blue,
+    -4rem 0 0px -2rem red,
+    -6rem 0 0px -3rem purple;
+}
