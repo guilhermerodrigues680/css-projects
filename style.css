@@ -1,52 +1,71 @@
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
   /* https://dev.to/jasperreddin/disabling-viewport-zoom-on-ios-14-web-browsers-l13 */
-  touch-action: pan-y;
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
   background: #12b3eb;
 }
 
-section {
+.project-list {
   background: #1a2d3b;
   color: white;
   padding: 2rem;
 }
 
-h2 {
+.project-list .title {
   padding-bottom: 0.5rem;
   border-bottom: medium solid white;
   margin: 0 0 1rem 0;
 }
 
-ul {
+.project-list .list {
   margin: 0;
   padding: 0;
   list-style: none;
   /* https://stackoverflow.com/questions/45049873/how-to-remove-the-blue-highlight-of-button-on-mobile */
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-li {
+.project-list .list .list-item {
   font-size: 1.125rem;
   margin-top: 0.75rem;
+  /* https://medium.com/@mezoistvan/finally-a-css-only-solution-to-hover-on-touchscreens-c498af39c31c */
+  /* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
+  /* mouse, touch pad */
 }
 
-li a {
+.project-list .list .list-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
   text-decoration: none;
   position: relative;
 }
 
-li a::before {
+.project-list .list .list-item a::before {
   content: '';
   display: inline-block;
   height: 2rem;
@@ -54,10 +73,11 @@ li a::before {
   border-radius: 50%;
   border: 2px solid #14a8e0;
   margin-right: 0.25rem;
+  -webkit-transition: background-color 0.05s linear;
   transition: background-color 0.05s linear;
 }
 
-li a::after {
+.project-list .list .list-item a::after {
   content: '';
   display: block;
   position: absolute;
@@ -65,32 +85,31 @@ li a::after {
   left: 0.5rem;
   width: 0.75rem;
   height: 0.75rem;
-  transform: rotateZ(45deg) translate(-36%, -30%);
+  -webkit-transform: rotateZ(45deg) translate(-36%, -30%);
+          transform: rotateZ(45deg) translate(-36%, -30%);
   border-top: 2px solid white;
   border-right: 2px solid white;
 }
 
-li a:active {
+.project-list .list .list-item a:active {
   color: #14a8e0;
 }
 
-li a:active::before {
+.project-list .list .list-item a:active::before {
   background: #14a8e0;
 }
 
-/* https://medium.com/@mezoistvan/finally-a-css-only-solution-to-hover-on-touchscreens-c498af39c31c */
-/* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
-/* mouse, touch pad */
-@media(hover: hover) and (pointer: fine) {
-  li a::before {
+@media (hover: hover) and (pointer: fine) {
+  .project-list .list .list-item a::before {
+    -webkit-transition: background-color 0.125s linear;
     transition: background-color 0.125s linear;
   }
-
-  li a:hover::before {
+  .project-list .list .list-item a:hover::before {
     background: #14a8e0;
   }
 }
 
-p {
+.author {
   color: white;
 }
+/*# sourceMappingURL=style.css.map */
