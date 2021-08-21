@@ -36,6 +36,23 @@ body {
 }
 
 /* Classes dos componentes */
+.btn {
+  border: none;
+  color: #ffffff;
+  background: #0E7490;
+  cursor: pointer;
+}
+
+.btn--badge {
+  padding: 0.5rem 1rem;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  border-radius: 9999px;
+}
+
 .header {
   position: fixed;
   z-index: 10;
@@ -201,6 +218,42 @@ main {
     text-align: center;
     font-weight: 900;
     font-size: 4rem;
+  }
+}
+
+.cookies-consent-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.125rem 1.5rem;
+  background: rgba(0, 0, 0, 0.8);
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.cookies-consent-bar p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.875rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.cookies-consent-bar p a {
+  color: #ffffff;
+  -webkit-text-decoration: underline #ffffff;
+          text-decoration: underline #ffffff;
+}
+
+.cookies-consent-bar .cookies-consent-bar__btn {
+  display: block;
+  margin: 0.5rem auto 0 auto;
+}
+
+@media (min-width: 768px) {
+  .cookies-consent-bar .cookies-consent-bar__btn {
+    margin-top: 1.25rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
