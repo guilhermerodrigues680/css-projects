@@ -10,24 +10,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <!-- https://stackoverflow.com/questions/8330559/hover-effects-using-css3-touch-events -->
-<!-- TODO: Adicionar classe overflow-hidden se o menu estiver aberto -->
-<!-- <body ontouchstart="" class="overflow-hidden"> -->
 <body ontouchstart="">
   <header class="header">
-    <!-- TODO: Adicionar classe hidden se o menu estiver aberto -->
-    <svg class="header__icon-menu hidden" width="46" height="33" viewBox="0 0 46 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg id="header-icon-menu-open" class="header__icon-menu" width="46" height="33" viewBox="0 0 46 33" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M3 16.3334H43" stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M3 3H43" stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M3 29.6666H43" stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-    <svg class="header__icon-menu" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg id="header-icon-menu-close" class="header__icon-menu hidden" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M2.85785 31.1421L31.1421 2.85782" stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M2.85785 2.85779L31.1421 31.1421" stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </header>
 
   <main>
-    <aside class="navigation-drawer">
+    <aside id="navigation-drawer" class="navigation-drawer hidden">
       <div class="navigation-drawer__content">
         <div class="navigation-drawer__links">
           <div>
@@ -54,5 +51,7 @@
   </main>
 
   <footer></footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
