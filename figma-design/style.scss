@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// Remove as margens padrão
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+html {
+  // background-color: #A29BFE;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  background: #ffffff;
+  height: 4.5rem;
+
+  @media (min-width: 768px) {
+    height: 6rem;
+  }
+}
+
+main {
+  .section-home {
+    min-height: 822px;
+    background-image: url(img/shape1.svg), url(img/shape2.svg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 15%, 50%;
+
+    // box-shadow aplicado no filho, pois box-shadow aplicado no pai não
+    // sobrepoe o filho
+    box-shadow:
+      inset 0px 2px 4px rgba(0, 0, 0, 0.16),
+      inset 0px 4px 8px rgba(0, 0, 0, 0.08)
+    ;
+
+    @media (min-width: 768px) {
+      background-size: auto;
+    }
+
+    .content {
+      padding: 3rem 0.9375rem 0rem 0.9375rem;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        max-width: 1200px;
+        padding-top: 5rem;
+        margin: 0rem auto;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        color: #2D3436;
+      }
+
+      h1 {
+        font-style: normal;
+        font-size: 4rem;
+
+        @media (min-width: 768px) {
+          text-align: center;
+          font-weight: 800;
+          font-size: 6rem;
+        }
+      }
+
+      h2 {
+        font-style: normal;
+        font-size: 1.5rem;
+
+        @media (min-width: 768px) {
+          text-align: center;
+          font-weight: 900;
+          font-size: 4rem;
+        }
+      }
+    }
+
+  }
+}

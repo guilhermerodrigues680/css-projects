@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  background: #ffffff;
+  height: 4.5rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 6rem;
+  }
+}
+
+main .section-home {
+  min-height: 822px;
+  background-image: url(img/shape1.svg), url(img/shape2.svg);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 15%, 50%;
+  -webkit-box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.16), inset 0px 4px 8px rgba(0, 0, 0, 0.08);
+          box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.16), inset 0px 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 768px) {
+  main .section-home {
+    background-size: auto;
+  }
+}
+
+main .section-home .content {
+  padding: 3rem 0.9375rem 0rem 0.9375rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  main .section-home .content {
+    max-width: 1200px;
+    padding-top: 5rem;
+    margin: 0rem auto;
+  }
+}
+
+main .section-home .content h1,
+main .section-home .content h2,
+main .section-home .content h3,
+main .section-home .content p {
+  color: #2D3436;
+}
+
+main .section-home .content h1 {
+  font-style: normal;
+  font-size: 4rem;
+}
+
+@media (min-width: 768px) {
+  main .section-home .content h1 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 6rem;
+  }
+}
+
+main .section-home .content h2 {
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  main .section-home .content h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 4rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
