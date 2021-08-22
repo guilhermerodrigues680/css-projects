@@ -257,14 +257,17 @@ main {
 
 .grid-area {
   height: 30rem; // 480px
-  margin-top: 2rem;
+  margin: 2rem auto 0 auto;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(8, 1fr);
   gap: 0.5rem;
 
-  @media (min-width: 640px) {
-    max-width: 360px;
+  @media (min-width: 768px) {
+    padding: 0rem 1.875rem;
+    max-width: 1200px;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(6, 1fr);
   }
 
   .frame {
@@ -277,6 +280,16 @@ main {
     &.frame--right {
       border-radius: 0.625rem 0rem 0rem 0.625rem;
     }
+
+    @media (min-width: 768px) {
+      &.frame--left {
+        border-radius: 0.625rem;
+      }
+
+      &.frame--right {
+        border-radius: 0.625rem;
+      }
+    }
   }
 
   .frame-1 {
@@ -284,6 +297,11 @@ main {
     background-size: cover;
     grid-column: 2 / 6;
     grid-row: 1 / 4;
+
+    @media (min-width: 768px) {
+      grid-column: 5 / 10;
+      grid-row: 1 / 4;
+    }
   }
 
   .frame-2 {
@@ -291,6 +309,11 @@ main {
     background-size: cover;
     grid-column: 6 / 7;
     grid-row: 2 / 4;
+
+    @media (min-width: 768px) {
+      grid-column: 13 / 16;
+      grid-row: 2 / 4;
+    }
   }
 
   .frame-3 {
@@ -298,6 +321,11 @@ main {
     background-size: cover;
     grid-column: 1 / 2;
     grid-row: 2 / 5;
+
+    @media (min-width: 768px) {
+      grid-column: 1 / 5;
+      grid-row: 2 / 5;
+    }
   }
 
   .frame-4 {
@@ -305,6 +333,11 @@ main {
     background-size: cover;
     grid-column: 2 / 4;
     grid-row: 4 / 6;
+
+    @media (min-width: 768px) {
+      grid-column: 10 / 13;
+      grid-row: 2 / 4;
+    }
   }
 
   .frame-5 {
@@ -312,6 +345,11 @@ main {
     background-size: cover;
     grid-column: 4 / 7;
     grid-row: 4 / 7;
+
+    @media (min-width: 768px) {
+      grid-column: 8 / 13;
+      grid-row: 4 / 7;
+    }
   }
 
   .frame-6 {
@@ -319,6 +357,11 @@ main {
     background-size: cover;
     grid-column: 1 / 2;
     grid-row: 5 / 7;
+
+    @media (min-width: 768px) {
+      grid-column: 5 / 8;
+      grid-row: 4 / 6;
+    }
   }
 
   .frame-7 {
@@ -326,11 +369,21 @@ main {
     background-size: cover;
     grid-column: 2 / 4;
     grid-row: 6 / 8;
+
+    @media (min-width: 768px) {
+      grid-column: 13 / 16;
+      grid-row: 4 / 6;
+    }
   }
 
   .frame-8 {
     grid-column: 4 / 7;
     grid-row: 7 / 8;
+
+    @media (min-width: 768px) {
+      grid-column: 1 / 5;
+      grid-row: 5 / 6;
+    }
 
     button {
       border: none;
@@ -342,6 +395,12 @@ main {
       font-size: 0.875rem;
       cursor: pointer;
       background: rgba(108, 92, 231, 1);
+
+      @media (min-width: 768px) {
+        display: block;
+        margin: auto;
+        font-size: 1.125rem;
+      }
     }
   }
 }
