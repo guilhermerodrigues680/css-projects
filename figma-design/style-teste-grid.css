@@ -10,6 +10,12 @@
   gap: 0.5rem;
 }
 
+@media (min-width: 640px) {
+  .grid-area {
+    max-width: 360px;
+  }
+}
+
 .grid-area .frame {
   border-radius: 0.625rem;
 }
@@ -23,7 +29,8 @@
 }
 
 .grid-area .frame-1 {
-  background: #56CCF2;
+  background: #56CCF2 url(img/frames/1.png) no-repeat center;
+  background-size: cover;
   -ms-grid-column: 2;
   -ms-grid-column-span: 4;
   grid-column: 2 / 6;
@@ -33,7 +40,8 @@
 }
 
 .grid-area .frame-2 {
-  background: #F2C94C;
+  background: #F2C94C url(img/frames/2.png) no-repeat left;
+  background-size: cover;
   -ms-grid-column: 6;
   -ms-grid-column-span: 1;
   grid-column: 6 / 7;
@@ -43,7 +51,8 @@
 }
 
 .grid-area .frame-3 {
-  background: #5C5C5C;
+  background: #5C5C5C url(img/frames/3.png) no-repeat right;
+  background-size: cover;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
@@ -53,7 +62,8 @@
 }
 
 .grid-area .frame-4 {
-  background: #F2C94C;
+  background: #F2C94C url(img/frames/4.png) no-repeat center;
+  background-size: cover;
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-column: 2 / 4;
@@ -63,7 +73,8 @@
 }
 
 .grid-area .frame-5 {
-  background: #0e7490;
+  background: #0e7490 url(img/frames/5.png) no-repeat left;
+  background-size: cover;
   -ms-grid-column: 4;
   -ms-grid-column-span: 3;
   grid-column: 4 / 7;
@@ -73,7 +84,8 @@
 }
 
 .grid-area .frame-6 {
-  background: #56CCF2;
+  background: #56CCF2 url(img/frames/6.png) no-repeat right;
+  background-size: cover;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
@@ -83,7 +95,8 @@
 }
 
 .grid-area .frame-7 {
-  background: #5C5C5C;
+  background: #5C5C5C url(img/frames/7.png) no-repeat center;
+  background-size: cover;
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-column: 2 / 4;
@@ -93,12 +106,23 @@
 }
 
 .grid-area .frame-8 {
-  background: #6c5ce7;
   -ms-grid-column: 4;
-  -ms-grid-column-span: 2;
-  grid-column: 4 / 6;
+  -ms-grid-column-span: 3;
+  grid-column: 4 / 7;
   -ms-grid-row: 7;
   -ms-grid-row-span: 1;
   grid-row: 7 / 8;
+}
+
+.grid-area .frame-8 button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  color: #ffffff;
+  letter-spacing: 0.15625rem;
+  font-weight: bold;
+  font-size: 0.875rem;
+  cursor: pointer;
+  background: #6c5ce7;
 }
 /*# sourceMappingURL=style-teste-grid.css.map */
