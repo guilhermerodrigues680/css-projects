@@ -98,6 +98,11 @@ main {
   }
 }
 
+footer {
+  height: 8rem;
+  background: #56CCF2;
+}
+
 .navigation-drawer {
   position: fixed;
   top: 4.5rem;
@@ -218,6 +223,10 @@ main {
     font-weight: 900;
     font-size: 4rem;
   }
+}
+
+.section-2 {
+  min-height: 25vh;
 }
 
 .cookies-consent-bar {
