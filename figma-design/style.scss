@@ -229,7 +229,121 @@ footer {
 }
 
 .section-2 {
-  min-height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem 0.9375rem;
+  background-image: url(img/section-2-bg.svg);
+
+  .section-2__top-image {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5.5rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 50%;
+  }
+
+  input[type="text"],
+  textarea {
+    width: 100%;
+    margin-top: 1rem;
+    border: none;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.125rem;
+    // color: #666666;
+
+    &:focus {
+      outline: 0.125rem solid #FF7694;
+    }
+  }
+
+  .select {
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.125rem;
+
+    .select__trigger {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .chevron {
+        background: url(img/chevron-down.svg) no-repeat center;
+        height: 0.5rem;
+        width: 0.75rem;
+      }
+    }
+
+    .select__options {
+      display: none;
+    }
+
+    &.select__options--open .select__options {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(calc(100% + 0.25rem));
+
+      width: 100%;
+      border-radius: 0.5rem;
+      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.6);
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.125rem;
+
+      .select__option {
+        padding: 0.5rem 1.25rem;
+        cursor: pointer;
+        background: #ffffff;
+
+        &:first-child {
+          border-radius: 0.5rem 0.5rem 0rem 0rem;
+        }
+
+        &:last-child {
+          border-radius: 0rem 0rem 0.5rem 0.5rem;
+        }
+
+        &:not(:last-child) {
+          border-bottom: thin solid #F0F0F0;
+        }
+
+        &:hover {
+          background: #FF7694;
+        }
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1.25rem;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.125rem;
+    background: #FF7694;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .cookies-consent-bar {

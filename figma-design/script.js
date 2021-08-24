@@ -98,3 +98,10 @@ switch (getUserAllowedCookiesStatus()) {
     showCookiesConsentBar();
     break;
 }
+
+// TODO: Melhorar javascript do dropdown
+const dropdown = document.querySelector('.select');
+dropdown.addEventListener('click', () => {
+  dropdown.classList.toggle('select__options--open');
+  console.debug('clic');
+})
