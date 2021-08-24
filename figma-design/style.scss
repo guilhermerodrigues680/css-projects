@@ -275,6 +275,7 @@ footer {
     font-style: normal;
     font-weight: normal;
     font-size: 1.125rem;
+    touch-action: manipulation;
 
     .select__trigger {
       display: flex;
@@ -292,40 +293,46 @@ footer {
       display: none;
     }
 
-    &.select__options--open .select__options {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      transform: translateY(calc(100% + 0.25rem));
+    &.select__options--open {
+      // Simula focus
+      outline: 0.125rem solid #FF7694;
 
-      width: 100%;
-      border-radius: 0.5rem;
-      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.6);
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1.125rem;
+      .select__options {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(calc(100% + 0.25rem));
 
-      .select__option {
-        padding: 0.5rem 1.25rem;
-        cursor: pointer;
-        background: #ffffff;
+        width: 100%;
+        border-radius: 0.5rem;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.6);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.125rem;
 
-        &:first-child {
-          border-radius: 0.5rem 0.5rem 0rem 0rem;
-        }
+        .select__option {
+          padding: 0.5rem 1.25rem;
+          cursor: pointer;
+          background: #ffffff;
 
-        &:last-child {
-          border-radius: 0rem 0rem 0.5rem 0.5rem;
-        }
+          &:first-child {
+            border-radius: 0.5rem 0.5rem 0rem 0rem;
+          }
 
-        &:not(:last-child) {
-          border-bottom: thin solid #F0F0F0;
-        }
+          &:last-child {
+            border-radius: 0rem 0rem 0.5rem 0.5rem;
+          }
 
-        &:hover {
-          background: #FF7694;
+          &:not(:last-child) {
+            border-bottom: thin solid #F0F0F0;
+          }
+
+          // &:hover,
+          &:active {
+            background: #FF7694;
+          }
         }
       }
     }

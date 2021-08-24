@@ -99,9 +99,44 @@ switch (getUserAllowedCookiesStatus()) {
     break;
 }
 
-// TODO: Melhorar javascript do dropdown
 const dropdown = document.querySelector('.select');
-dropdown.addEventListener('click', () => {
-  dropdown.classList.toggle('select__options--open');
-  console.debug('clic');
+const dropdownOptions = document.querySelector('.select__options');
+let dropdownSelected = null;
+
+// disable the double-tap zoom: https://stackoverflow.com/a/28752323
+dropdown.addEventListener('touchend', (e) => {
+  e.preventDefault();
+  e.target.click();
 })
+
+document.addEventListener('click', (e) => {
+  console.debug('Click!!')
+
+  // Clique em uma opçao do dropdown
+  if (e.composedPath().includes(dropdownOptions)) {
+    console.debug('Click em opcao', e.target)
+    if (e.target.classList.contains('select__option')) {
+      console.debug(e.target.dataset.value);
+      dropdownSelected = e.target.dataset.value;
+      dropdown.querySelector('.selected__text').innerText = dropdownSelected;
+    }
+    dropdown.classList.remove('select__options--open');
+    return;
+  }
+
+  // Clique no dropdown fechado
+  if (e.composedPath().includes(dropdown) && !dropdown.classList.contains('select__options--open')){
+    console.debug('Abrindo modal');
+    dropdown.classList.add('select__options--open');
+    return;
+  }
+
+  // Clique fora do dropdown e o dropdow está aberto ou
+  // Clique no dropdown aberto
+  if (!e.composedPath().includes(dropdown) && dropdown.classList.contains('select__options--open') ||
+    e.composedPath().includes(dropdown) && dropdown.classList.contains('select__options--open')) {
+    console.debug('Modal aberto, fechando');
+    dropdown.classList.remove('select__options--open');
+    return;
+  }
+});

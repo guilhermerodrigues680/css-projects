@@ -288,6 +288,8 @@ footer {
   font-style: normal;
   font-weight: normal;
   font-size: 1.125rem;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 .section-2 .select .select__trigger {
@@ -310,6 +312,10 @@ footer {
 
 .section-2 .select .select__options {
   display: none;
+}
+
+.section-2 .select.select__options--open {
+  outline: 0.125rem solid #FF7694;
 }
 
 .section-2 .select.select__options--open .select__options {
@@ -352,7 +358,7 @@ footer {
   border-bottom: thin solid #F0F0F0;
 }
 
-.section-2 .select.select__options--open .select__options .select__option:hover {
+.section-2 .select.select__options--open .select__options .select__option:active {
   background: #FF7694;
 }
 
